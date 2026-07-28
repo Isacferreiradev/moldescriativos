@@ -1147,10 +1147,10 @@
       background: rgba(28, 22, 28, .62);
       backdrop-filter: blur(3px);
       display: none;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       z-index: 1000;
-      padding: 24px 16px;
+      padding: 16px;
       overflow-y: auto
     }
 
@@ -1165,9 +1165,9 @@
     .modal {
       background: #fff;
       border-radius: 18px;
-      max-width: 400px;
+      max-width: 380px;
       width: 100%;
-      padding: 32px 26px 28px;
+      padding: 24px 20px 20px;
       position: relative;
       box-shadow: 0 30px 90px -20px rgba(0, 0, 0, .55);
       margin: auto;
@@ -1188,10 +1188,10 @@
 
     .modal .close {
       position: absolute;
-      top: 12px;
-      right: 14px;
-      width: 30px;
-      height: 30px;
+      top: 10px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
       border: none;
       background: none;
       font-size: 24px;
@@ -1199,7 +1199,10 @@
       color: #b3b3b3;
       cursor: pointer;
       border-radius: 50%;
-      transition: color .2s, background .2s
+      transition: color .2s, background .2s;
+      display: flex;
+      align-items: center;
+      justify-content: center
     }
 
     .modal .close:hover {
@@ -1208,19 +1211,19 @@
     }
 
     .modal h3 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       text-align: center;
       color: var(--text);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.25
     }
 
     .modal .sub {
       text-align: center;
       color: var(--muted);
-      font-size: 13.5px;
-      margin-bottom: 18px
+      font-size: 13px;
+      margin-bottom: 12px
     }
 
     .modal .sub b {
@@ -1229,12 +1232,12 @@
 
     .modal .pricebox {
       background: var(--gray-bg);
-      border-radius: 12px;
-      padding: 14px;
+      border-radius: 10px;
+      padding: 10px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: center;
       gap: 10px
     }
@@ -1242,13 +1245,13 @@
     .modal .pricebox .was {
       color: #d11a1a;
       text-decoration: line-through;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600
     }
 
     .modal .pricebox .now {
       color: var(--green);
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 800;
       font-family: 'Poppins';
       line-height: 1
@@ -1256,22 +1259,33 @@
 
     .modal ul {
       list-style: none;
-      margin-bottom: 22px
+      margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4px
+    }
+
+    @media(min-width:350px) {
+      .modal ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 10px
+      }
     }
 
     .modal li {
-      padding: 5px 0;
-      font-size: 13px;
+      padding: 2px 0;
+      font-size: 11.5px;
       display: flex;
-      gap: 9px;
+      gap: 6px;
       align-items: flex-start;
-      color: var(--text)
+      color: var(--text);
+      line-height: 1.3
     }
 
     .modal li .ck {
       color: var(--green);
       flex-shrink: 0;
-      font-size: 14px;
+      font-size: 12px;
       margin-top: 1px
     }
 
@@ -1280,9 +1294,9 @@
     }
 
     .modal .btn {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-size: 13px;
-      padding: 16px 24px
+      padding: 14px 20px
     }
 
     .modal .btn-outline {
@@ -1332,6 +1346,28 @@
 
       .countdown .box {
         min-width: 60px
+      }
+
+      .modal {
+        max-width: 95%;
+        padding: 20px 16px 16px
+      }
+
+      .modal h3 {
+        font-size: 18px
+      }
+
+      .modal .pricebox {
+        margin-bottom: 10px;
+        padding: 8px
+      }
+
+      .modal .pricebox .now {
+        font-size: 24px
+      }
+
+      .modal ul {
+        margin-bottom: 12px
       }
     }
   </style>
